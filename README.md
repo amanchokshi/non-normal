@@ -1,5 +1,8 @@
 # non-normal
-Generate non-normal distributions with given a mean, variance, skewness and kurtosis
+Generate non-normal distributions with given a mean, variance, skewness and kurtosis using
+the [Fleishman Method](https://link.springer.com/article/10.1007/BF02293811)
+
+![Non-Normal Distribution](./docs/imgs/banner.png)
 
 ### Installation
 
@@ -17,8 +20,8 @@ from non_normal import fleishman
 # Input parameters for non-normal field
 mean = 0
 var = 1
-skew = 2
-ekurt = 6
+skew = 1
+ekurt = 2
 size = 2**20
 
 # Create an instance of the Fleishman class
@@ -31,10 +34,8 @@ non_normal_data = ff.field
 # Measure the stats of the generated samples
 ff.field_stats
 
->>> {
-'mean': 0.00029969955054414245, 
-'var': 1.0019932680714605, 
-'skew': 2.011601878030434, 
-'ekurt': 6.139570248892955
-}
+>>> {'mean':    0.000203128504124, 
+     'var':     1.001352686678266, 
+     'skew':    1.005612915524984, 
+     'ekurt':   2.052527629375554,}
 ```
