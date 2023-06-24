@@ -1,7 +1,7 @@
 """Testing non_normal.fleishman"""
 
 import numpy as np
-from numpy.testing import assert_
+
 from non_normal import fleishman
 
 
@@ -26,11 +26,7 @@ def test_fl_deriv():
 
     ff = fleishman.Fleishman()
 
-    expected_mat = np.array(
-        [[20, 8, 96],
-         [296, 2040, 2616],
-         [39432, 130080, 699960]]
-    )
+    expected_mat = np.array([[20, 8, 96], [296, 2040, 2616], [39432, 130080, 699960]])
 
     output_mat = ff.fl_deriv(1, 2, 3)
     assert np.all(expected_mat == output_mat)
@@ -41,8 +37,7 @@ def test_newton():
 
     ff = fleishman.Fleishman()
 
-    assert ff.newton(1, 10, 100) == (
-        1.4943510437111611, 0.0, -0.21450355527308587)
+    assert ff.newton(1, 10, 100) == (1.4943510437111611, 0.0, -0.21450355527308587)
 
 
 def test_fl_ic():
@@ -62,7 +57,7 @@ def test_gen_field_values():
     ff = fleishman.Fleishman(size=4)
     ff.gen_field()
 
-    expected = np.array([0.30471708, -1.03998411,  0.7504512,  0.94056472])
+    expected = np.array([0.30471708, -1.03998411, 0.7504512, 0.94056472])
     assert np.all(np.isclose(expected, ff.field))
 
 
@@ -76,8 +71,12 @@ def test_gen_field_stats():
     ff.gen_field()
     stats = ff.field_stats
 
-    expected = {'mean': 0.23893722142790175, 'var': 0.5984736099498982,
-                'skew': -0.8706188765823788, 'ekurt': -0.9157032449998184}
+    expected = {
+        "mean": 0.23893722142790175,
+        "var": 0.5984736099498982,
+        "skew": -0.8706188765823788,
+        "ekurt": -0.9157032449998184,
+    }
 
     assert {expected == stats}
 
