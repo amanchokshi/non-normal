@@ -1,7 +1,7 @@
 # non-normal
 Generate a non-normal distributions with given a mean, variance, skewness and kurtosis using
 the [Fleishman Method](https://link.springer.com/article/10.1007/BF02293811),
-essentially a cubic transformation on a standard normal [$X \sim N(0, 1)$]
+essentially a cubic transformation on a standard normal [X~N(0, 1)]
 
 $$
 Y =a +bX +cX^2 +dX^3
