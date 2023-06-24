@@ -1,8 +1,19 @@
 # non-normal
-Generate non-normal distributions with given a mean, variance, skewness and kurtosis using
-the [Fleishman Method](https://link.springer.com/article/10.1007/BF02293811)
+Generate a non-normal distributions with given a mean, variance, skewness and kurtosis using
+the [Fleishman Method](https://link.springer.com/article/10.1007/BF02293811),
+essentially a cubic transformation on a standard normal [$X \sim N(0, 1)$]
+
+$$
+Y =a +bX +cX^2 +dX^3
+$$
+
+where the coefficients ($\,a,\, b,\, c,\, d\,$) are tuned to create a distribution
+with the desired statistic
 
 ![Non-Normal Distribution](./docs/imgs/banner.png)
+Figure 1. A non-normal field generated in the `usage` section below. The title
+shows the input parameters, and the emperically measured statistics of the 
+generated distribution
 
 ### Installation
 
