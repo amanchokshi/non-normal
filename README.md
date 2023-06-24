@@ -7,7 +7,7 @@ $$
 Y =a +bX +cX^2 +dX^3
 $$
 
-where the coefficients ($\,a,\, b,\, c,\, d\,$) are tuned to create a distribution
+where the coefficients ($a, b, c, d$) are tuned to create a distribution
 with the desired statistic
 
 ![Non-Normal Distribution](./docs/imgs/banner.png)
