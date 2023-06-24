@@ -164,21 +164,26 @@ class Fleishman:
         df3dc = 48 * c * (1 + b2 + 28*bd + 141*d2)
         df3dd = 24 * (b + 28*b * c2 + 2 * d * (12 + 48*bd +
                       141*c2 + 225*d2) + d2 * (48*b + 450*d))
-        return np.matrix([[df1db, df1dc, df1dd],
-                          [df2db, df2dc, df2dd],
-                          [df3db, df3dc, df3dd]])
+        return np.array([[df1db, df1dc, df1dd],
+                         [df2db, df2dc, df2dd],
+                         [df3db, df3dc, df3dd]])
 
     def newton(self, b0, c0, d0):
         """Implements newtons method to find a root of fl_func."""
 
+        # Loop counter
+        i = 0
+
+        # Initial conditions
         f = self.fl_func(b0, c0, d0)
-        for _ in range(self.max_iter):
-            if max(map(abs, f)) < self.converge:
-                break
+
+        while np.abs(f).max() > self.converge or i < self.max_iter:
+
             J = self.fl_deriv(b0, c0, d0)
             delta = -1 * np.linalg.solve(J, f)
             (b0, c0, d0) = delta + (b0, c0, d0)
             f = self.fl_func(b0, c0, d0)
+            i += 1
 
         return (b0, c0, d0)
 
