@@ -58,7 +58,7 @@ class Fleishman:
         - https://support.sas.com/content/dam/SAS/support/en/books/simulating-data-with-sas/65378_Appendix_D_Functions_for_Simulating_Data_by_Using_Fleishmans_Transformation.pdf
         - https://www.diva-portal.org/smash/get/diva2:407995/FULLTEXT01.pd
         - https://pubmed.ncbi.nlm.nih.gov/34779511/
-        - https://gist.github.com/paddymccrudden/de5ab688b0d93e204098f03ccc211d88
+        - https://gist.github.com/zeimusu/7432603b85dc6406c6ea
         - https://link.springer.com/article/10.1007/BF02293687
     """
 
