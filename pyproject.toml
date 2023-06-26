@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "non-normal"
-version = "0.1.1"
+version = "0.1.2"
 description = "Generate non-normal distributions with known mean, variance, skewness and kurtosis"
 license = "MIT"
 readme = "README.md"
